@@ -149,4 +149,3 @@ module.exports = {
             return sendError(`I could not join the voice channel: ${error}`, message.channel);
         }
     },
-};
