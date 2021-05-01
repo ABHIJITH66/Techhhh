@@ -13,11 +13,10 @@ run: async(client, message, args) => {
   let say = message.content.split(" ").slice(1).join(" ")
   if(!say) return message.channel.send(`❌ | `+"I Cannot Repeat Blank Message")
   let embed = new MessageEmbed()
-.setAuthor(message.author.username, message.author.avatarURL())
   .setDescription(`${say}`)
   .setColor("RANDOM")
 .setFooter(` ${message.guild}`)
-.setTimestamp()
+  .setTimestamp()
   message.channel.send(embed)
 }
 }
