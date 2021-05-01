@@ -1,70 +1,42 @@
+const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const db = require("quick.db");
+const { Color } = require("../../config.js");
 
 module.exports = {
   name: "warn",
-  category: "moderation",
-  usage: "warn <@mention> <reason>",
-  description: "Warn anyone who do not obey the rules",
+  aliases: [],
+  description: "Warn A User!",
+  usage: "Warn <Mention User> | <Reason>",
   run: async (client, message, args) => {
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
-      return message.channel.send(
-        "You should have admin perms to use this command!"
-      );
-    }
+    //Start
+    message.delete();
 
-    const user = message.mentions.members.first();
+    let Member =
+      message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]);
 
-    if (!user) {
-      return message.channel.send(
-        "Please Mention the person to who you want to warn - warn @mention <reaosn>"
-      );
-    }
+    if (!Member) return message.channel.send(`Please Mention A User!`);
 
-    if (message.mentions.users.first().bot) {
-      return message.channel.send("You can not warn bots");
-    }
+    let Reason = args.slice(1).join(" ");
 
-    if (message.author.id === user.id) {
-      return message.channel.send("You can not warn yourself");
-    }
+    client.db.add(`Warnings_${message.guild.id}_${Member.user.id}`, 1);
 
-    if (user.id === message.guild.owner.id) {
-      return message.channel.send(
-        "You jerk, how you can warn server owner -_-"
-      );
-    }
+    let Warnings = client.db.get(
+      `Warnings_${message.guild.id}_${Member.user.id}`
+    );
 
-    const reason = args.slice(1).join(" ");
+    let embed = new MessageEmbed()
+      .setColor(Color)
+      .setTitle(`${Member.user.username} Warned!`)
+      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
+      .addField(`Warned Member`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`Now Member Warnings`, Warnings)
+      .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
+      .setFooter(`Requested by ${message.author.username}`)
+      .setTimestamp();
 
-    if (!reason) {
-      return message.channel.send(
-        "Please provide reason to warn - warn @mention <reason>"
-      );
-    }
+    message.channel.send(embed);
 
-    let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
-
-    if (warnings === null) {
-      db.set(`warnings_${message.guild.id}_${user.id}`, 1);
-      user.send(
-        `You have been warned in **${message.guild.name}** for ${reason}`
-      );
-      await message.channel.send(
-        `You warned **${
-          message.mentions.users.first().username
-        }** for ${reason}`
-      );
-    } else if(warnings !== null) {
-      
-      db.add(`warnings_${message.guild.id}_${user.id}`, 1);
-      
-      user.send(`You have been warned in **${message.guild.name}** for ${reason}`);
-      
-      await message.channel.send(`You warned **${message.mentions.users.first().username}** for ${reason}`);
-      
-      message.delete
-      
-    }
+    //End
   }
 };
