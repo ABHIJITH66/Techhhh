@@ -66,32 +66,22 @@ client.on("message", (message) => {
   };
 });
 
+//command 
 
-//test
-let modules = ["fun", "info", "moderation"];
-
+let modules = ["fun", "info","moderation"];
 modules.forEach(function(module) {
-  fs.readdir(`./commands/${module}`, function(err, files) {
-    if (err)
-      return new Error(
-        "Missing Folder Of Commands! Example : Commands/<Folder>/<Command>.js"
-      );
-      files.forEach(function(file) {
-      if (!file.endsWith(".js")) return;
-      
-      let command = require(`./commands/${module}/${file}`);
-      console.log(`${command.name} Command Has Been Loaded - ✅`);
-      if (command.name) client.commands.set(command.name, command);
-      if (command.aliases) {
-        command.aliases.forEach(alias =>
-          client.aliases.set(alias, command.name)
-        );
-      }
-      if (command.aliases.length === 1000000) command.aliases = null;
-    });
+fs.readdir(`./commands/${module}`, (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(function(file) {
+    if (!file.endsWith(".js")) return;
+    let props = require(`./commands/${module}/${file}`);
+    let commandName = file.split(".")[0];
+    client.commands.set(commandName, props);
+    console.log("Loading Command: "+commandName)
   });
 });
-
+});
+//end command
 
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
