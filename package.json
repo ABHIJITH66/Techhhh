@@ -37,7 +37,8 @@
     "jimp": "^0.16.1",
     "discord-utils.js": "^1.0.8",
     "something-random-on-discord": "^3.4.4",
-    "mathjs": "^9.3.2"
+    "mathjs": "^9.3.2",
+    "request-promise-native": "^1.0.9"
   },
   "engines": {
     "node": "12.x"

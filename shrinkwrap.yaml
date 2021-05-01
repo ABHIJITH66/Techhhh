@@ -18,6 +18,7 @@ dependencies:
   novelcovid: 3.0.0
   old-wio.db: 4.0.10
   quick.db: 7.1.1
+  request-promise-native: 1.0.9
   something-random-on-discord: 3.4.4
   srod-v2: 1.0.2
   tinyurl: 1.1.7
@@ -3475,6 +3476,29 @@ packages:
       node: '>=6.5.0'
     resolution:
       integrity: sha512-lv0M6+TkDVniA3aD1Eg0DVpfU/booSu7Eev3TDO/mZKHBfVjgCGTV4t4buppESEYDtkArYFOxTJWv6S5C+iaNw==
+  /request-promise-core/1.1.4:
+    dependencies:
+      lodash: 4.17.21
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    peerDependencies:
+      request: ^2.34
+    resolution:
+      integrity: sha512-TTbAfBBRdWD7aNNOoVOBH4pN/KigV6LyapYNNlAPA8JwbovRti1E88m3sYAwsLi5ryhPKsE9APwnjFTgdUjTpw==
+  /request-promise-native/1.0.9:
+    dependencies:
+      request-promise-core: 1.1.4
+      stealthy-require: 1.1.1
+      tough-cookie: 2.5.0
+    deprecated: 'request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142'
+    dev: false
+    engines:
+      node: '>=0.12.0'
+    peerDependencies:
+      request: ^2.34
+    resolution:
+      integrity: sha512-wcW+sIUiWnKgNY0dqCpOZkUbF/I+YPi+f09JZIDa39Ec+q82CpSYniDp+ISgTTbKmnpJWASeJBPZmoxH84wt3g==
   /request/2.88.2:
     dependencies:
       aws-sign2: 0.7.0
@@ -3744,6 +3768,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  /stealthy-require/1.1.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
   /string-width/1.0.2:
     dependencies:
       code-point-at: 1.1.0
@@ -4390,6 +4420,7 @@ specifiers:
   novelcovid: ^3.0.0
   old-wio.db: ^4.0.10
   quick.db: ^7.1.1
+  request-promise-native: ^1.0.9
   something-random-on-discord: ^3.4.4
   srod-v2: ^1.0.2
   tinyurl: ^1.1.7

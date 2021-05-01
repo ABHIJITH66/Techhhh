@@ -18,7 +18,7 @@ module.exports = {
       Users     :: ${message.client.users.cache.size}
       Channels  :: ${message.client.channels.cache.size}
       WS Ping   :: ${Math.round(message.client.ws.ping)}ms
-      Uptime    :: ${days} and ${hours}
+      CREATER   :: ABHIJITH#6408
     `;
     const { totalMemMb, usedMemMb } = await mem.info();
     const serverStats = stripIndent`
@@ -32,7 +32,6 @@ module.exports = {
     
     const embed = new MessageEmbed()
       .setTitle('Bot\'s Statistics')
-      .addField('Commands', `\`${message.client.commands.size}\` commands`, true)
       .addField('Client', `\`\`\`asciidoc\n${clientStats}\`\`\``)
       .addField('Server', `\`\`\`asciidoc\n${serverStats}\`\`\``)
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
