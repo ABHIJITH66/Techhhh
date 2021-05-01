@@ -31,7 +31,7 @@ module.exports = {
     `;
     
     const embed = new MessageEmbed()
-      .setTitle('Bot\'s Statistics')
+      .setTitle('INFORMATION ABOUT BOT')
       .addField('Client', `\`\`\`asciidoc\n${clientStats}\`\`\``)
       .addField('Server', `\`\`\`asciidoc\n${serverStats}\`\`\``)
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))

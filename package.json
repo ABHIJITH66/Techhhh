@@ -44,7 +44,8 @@
     "mathjs": "^9.3.2",
     "request-promise-native": "^1.0.9",
     "amethyste-api": "^1.1.4",
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "google-play-scraper": "^8.0.2"
   },
   "engines": {
     "node": "12.x"
