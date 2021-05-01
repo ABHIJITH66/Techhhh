@@ -15,7 +15,7 @@ module.exports = {
     .setColor(Color)
     .setTitle(`${client.user.username} Commands!`)
     .setDescription(`Use ${Prefix}Help <Command Name> For More Command Information!` + 
-    "\n\n**Fun**\n`Avatar, Coinflip, Meme, Rate,Dicksize, Wasted, Ascii, Hack, Randomnumber,8ball,joke,`" + "\n\n" + "**Moderation**\n`Clear, Mute, SlowMode, Resetwarn ,Copyright, Unmute, Unban, Warn, Warnings, Fact, Poll, Why`" + "\n\n"+
+    "\n\n**Fun**\n`Avatar, Coinflip, Meme, Rate,Dicksize, Wasted, Ascii, Hack, Announce , Bug , Meeting ,Randomnumber,8ball,joke,``Clear, Mute, SlowMode, Resetwarn ,Copyright, Unmute, Unban, Warn, Warnings, Fact, Poll, Why`" + "\n\n"+
     "**Information**\n`Help, Maths, Weather, Userinfo, Serverinfo, Level, BotInfo, Ping, Uptime`")
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();
