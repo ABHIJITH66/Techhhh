@@ -15,6 +15,7 @@ dependencies:
   express: 4.17.1
   figlet: 1.5.0
   fs: 0.0.2
+  google: 2.1.0
   google-play-scraper: 8.0.2
   jimp: 0.16.1
   live-server: 1.2.1
@@ -1090,6 +1091,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
+  /cheerio/0.19.0:
+    dependencies:
+      css-select: 1.0.0
+      dom-serializer: 0.1.1
+      entities: 1.1.2
+      htmlparser2: 3.8.3
+      lodash: 3.10.1
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-dy5wFfLuKZZQltcepBdbdas1SSU=
   /cheerio/0.22.0:
     dependencies:
       css-select: 1.2.0
@@ -1328,6 +1341,15 @@ packages:
       node: '>=4.8'
     resolution:
       integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==
+  /css-select/1.0.0:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 1.0.0
+      domutils: 1.4.3
+      nth-check: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha1-sRIcpRhI3SZOIkTQWM7iVN7rRLA=
   /css-select/1.2.0:
     dependencies:
       boolbase: 1.0.0
@@ -1337,6 +1359,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-KzoRBTnFNV8c2NMUYj6HCxIeyFg=
+  /css-what/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-18wt9FGAZm+Z0rFEYmOUaeAPc2w=
   /css-what/2.1.3:
     dev: false
     resolution:
@@ -1604,12 +1630,24 @@ packages:
     dev: false
     resolution:
       integrity: sha512-LsTgx/L5VpD+Q8lmsXSHW2WpA+eBlZ9HPf3erD1IoPF00/3JKHZ3BknUVA2QGDNu69ZNmyFmCWBSO45XjYKC5w==
+  /domhandler/2.3.0:
+    dependencies:
+      domelementtype: 1.3.1
+    dev: false
+    resolution:
+      integrity: sha1-LeWaCCLVAn+r/28DLCsloqir5zg=
   /domhandler/2.4.2:
     dependencies:
       domelementtype: 1.3.1
     dev: false
     resolution:
       integrity: sha512-JiK04h0Ht5u/80fdLMCEmV4zkNh2BcoMFBmZ/91WtYZ8qVXSKjiw7fXMgFPnHcSZgOo3XdinHvmnDUeMf5R4wA==
+  /domutils/1.4.3:
+    dependencies:
+      domelementtype: 1.3.1
+    dev: false
+    resolution:
+      integrity: sha1-CGVRN5bGswYDGFDhdVFrr4C3Km8=
   /domutils/1.5.1:
     dependencies:
       dom-serializer: 0.2.2
@@ -1664,6 +1702,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-36zXOIJrAvL6Dk03vz9PA4anpIkms3kelJhG+X1hw5HYlRv8yT6UEMvDH1yUaMYfsH4v3D04nLoBX4z2Vqambw==
+  /entities/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-sph6o4ITR/zeZCsk/fyeT7cSvyY=
   /entities/1.1.2:
     dev: false
     resolution:
@@ -2446,6 +2488,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fdc163GNyzx7Ygz8TSUwWM0hOsxgNYXRMWPZ9OnzwOLgKikUegAiCBICJzdqFdhnCKlx0bIxlghAT1eAo9/61w==
+  /google/2.1.0:
+    dependencies:
+      cheerio: 0.19.0
+      request: 2.88.2
+    dev: false
+    resolution:
+      integrity: sha1-Edl8m1QvoqxMOlDLzZwUyC9qgQE=
   /graceful-fs/4.2.6:
     dev: false
     resolution:
@@ -2550,6 +2599,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-IgieNijUMbkDovyoKObU1DUhm1iwNYE/fuifEoEHfd1oZKZDaONBSkal7Y01shxsM49R4XaMdGez3WnF9UfiCQ==
+  /htmlparser2/3.8.3:
+    dependencies:
+      domelementtype: 1.3.1
+      domhandler: 2.3.0
+      domutils: 1.5.1
+      entities: 1.0.0
+      readable-stream: 1.1.14
+    dev: false
+    resolution:
+      integrity: sha1-mWwosZFRaovoZQGn15dX5ccMEGg=
   /http-auth/3.1.3:
     dependencies:
       apache-crypt: 1.2.4
@@ -3021,6 +3080,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-HxbkqiKwTRM2tmGIpmrzxgDDpm0=
+  /isarray/0.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
   /isarray/1.0.0:
     dev: false
     resolution:
@@ -3264,6 +3327,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-G7nzFO9ri63tE7VJFpsqlF62jk0=
+  /lodash/3.10.1:
+    dev: false
+    resolution:
+      integrity: sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
   /lodash/4.17.15:
     dev: false
     resolution:
@@ -4312,6 +4379,15 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-jvHAYjxqbbDcZxPEv6xGMysjaPg=
+  /readable-stream/1.1.14:
+    dependencies:
+      core-util-is: 1.0.2
+      inherits: 2.0.4
+      isarray: 0.0.1
+      string_decoder: 0.10.31
+    dev: false
+    resolution:
+      integrity: sha1-fPTFTvZI44EwhMY23SB54WbAgdk=
   /readable-stream/2.3.7:
     dependencies:
       core-util-is: 1.0.2
@@ -4868,6 +4944,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-jh6e984OBfvxS50tdY2nRZnoC5/mLFKOREQfw8t5yytkoUsJRNxvI/E39qu1sD0OtWI3OC0XgKSmcWwziwYuZw==
+  /string_decoder/0.10.31:
+    dev: false
+    resolution:
+      integrity: sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
   /string_decoder/1.1.1:
     dependencies:
       safe-buffer: 5.1.2
@@ -5552,6 +5632,7 @@ specifiers:
   express: ^4.17.1
   figlet: ^1.5.0
   fs: ^0.0.2
+  google: ^2.1.0
   google-play-scraper: ^8.0.2
   jimp: ^0.16.1
   live-server: ^1.2.1
