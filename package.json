@@ -36,7 +36,8 @@
     "common-tags": "^1.8.0",
     "jimp": "^0.16.1",
     "discord-utils.js": "^1.0.8",
-    "something-random-on-discord": "^3.4.4"
+    "something-random-on-discord": "^3.4.4",
+    "mathjs": "^9.3.2"
   },
   "engines": {
     "node": "12.x"

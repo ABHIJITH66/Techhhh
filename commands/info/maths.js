@@ -3,8 +3,8 @@ const math = require("mathjs");
 const Color = `RANDOM`;
 
 module.exports = {
-  name: "math",
-  category: "fun",
+  name: "maths",
+  category: "info",
   run: async (client, message, args) => {
     try {
       if (!args[0]) return message.channel.send("Please Give Me Equation!");
@@ -20,3 +20,4 @@ module.exports = {
       message.channel.send(`Please Give Me Valid Equation | Try Again Later!`).then(() => console.log(error));
     }
   }
+  };
