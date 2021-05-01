@@ -8,6 +8,34 @@ client.aliases = new Discord.Collection();
 client.db = require("quick.db");
 const moment = require("moment")
 const db = require("quick.db")
+var jimp = require('jimp');
+
+module.exports.run = async (bot, message, args) => {
+
+	let permission = message.member.hasPermission("ADMINISTRATOR");
+
+if(!permission) return message.channel.send("You are missing the permission `ADMINISTRATOR`")
+
+ let cArgs = args[0]
+ 
+ if(isNaN(cArgs)) return message.channel.send("You must specify a valid id for the welcome channel!")
+	 
+ try{
+	 bot.guilds.get(message.guild.id).channels.get(cArgs).send("Welcome channel set!")
+	 
+ db.set(`${message.guild.id}`, cArgs)
+ 
+ message.channel.send("You have successfully set the welcome channel to <#" + cArgs + ">")
+return;
+ }catch(e){
+	return message.channel.send("Error: missing permissions or channel doesn't exist")
+ }
+ 
+ 
+}
+module.exports.help = {
+  name: "channel"
+}
 client.on("ready", async () => { console.log(`ready!`); client.user .setActivity(`USE =help FOR HELP`, { type: "PLAYING" }) .catch(error => console.log(error)); });
 //hi
 
@@ -116,7 +144,9 @@ client.on("message", async message => {
     `User : ${message.author.tag} (${message.author.id}) Server : ${message.guild.name} (${message.guild.id}) Command : ${command.name}`
   );
 });
-
+ //welcome 
+	
+//end welcome
 
 
 
