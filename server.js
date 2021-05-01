@@ -98,7 +98,7 @@ client.on("message", (message) => {
   };
 });
 
-//command //M
+//command 
 
 let modules = ["fun", "info","moderation"];
 modules.forEach(function(module) {
