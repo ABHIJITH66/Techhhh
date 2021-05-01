@@ -98,7 +98,7 @@ client.on("message", (message) => {
   };
 });
 
-//command 
+//command //M
 
 let modules = ["fun", "info","moderation"];
 modules.forEach(function(module) {
@@ -109,8 +109,12 @@ fs.readdir(`./commands/${module}`, (err, files) => {
     let props = require(`./commands/${module}/${file}`);
     let commandName = file.split(".")[0];
     client.commands.set(commandName, props);
-    console.log("Loading//end command
+    console.log("Loading Command: "+commandName)
+  });
+});
+});
 
+//-
   
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
