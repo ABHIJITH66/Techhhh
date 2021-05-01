@@ -1,35 +1,17 @@
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
+
+const db = require("quick.db");
 
 module.exports = {
   name: "warnings",
-  aliases: ["warning"],
-  description: "Show User Warnings!",
-  usage: "Warnings <Mention User>",
-  run: async (client, message, args) => {
-    //Start
-    message.delete();
+  description: "Get the warnings of yours or mentioned person",
+  category: "moderation",
+  run: (client, message, args) => {
+    const user = message.mentions.members.first() || message.author;
 
-    let Member =
-      message.mentions.members.first() ||
-      message.guild.members.cache.get(args[0]);
+    let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
 
-    if (!Member) return message.channel.send(`Please Mention A User!`);
+    if (warnings === null) warnings = 0;
 
-    let Warnings = client.db.get(
-      `Warnings_${message.guild.id}_${Member.user.id}`
-    );
-
-    let embed = new MessageEmbed()
-      .setColor(Color)
-      .setTitle(`${Member.user.username} Warnings!`)
-      .setDescription(`${Member.user.username} Has ${Warnings || "0"} Warnings!`)
-      .setFooter(`Requested by ${message.author.username}`)
-      .setTimestamp();
-
-    message.channel.send(embed);
-
-    //End
+    message.channel.send(`${user} have **${warnings}** warning(s)`);
   }
 };
