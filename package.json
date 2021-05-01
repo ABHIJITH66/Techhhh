@@ -34,7 +34,8 @@
     "@ethersproject/errors": "^5.0.1",
     "node-os-utils": "^1.3.4",
     "common-tags": "^1.8.0",
-    "jimp": "^0.16.1"
+    "jimp": "^0.16.1",
+    "discord-utils.js": "^1.0.8"
   },
   "engines": {
     "node": "12.x"

@@ -109,11 +109,13 @@ fs.readdir(`./commands/${module}`, (err, files) => {
     let commandName = file.split(".")[0];
     client.commands.set(commandName, props);
     console.log("Loading Command: "+commandName)
+
+  
   });
 });
 });
 //end command
-
+  
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
   if (message.author.bot) return;
