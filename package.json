@@ -46,7 +46,8 @@
     "amethyste-api": "^1.1.4",
     "live-server": "^1.2.1",
     "google-play-scraper": "^8.0.2",
-    "discord-snakegame": "^2.0.0"
+    "discord-snakegame": "^2.0.0",
+    "google": "^2.1.0"
   },
   "engines": {
     "node": "12.x"
