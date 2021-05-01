@@ -3,7 +3,7 @@ const  Random = require("srod-v2");
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "triggered",
+  name: "tgd",
   aliases: ["tgd"],
   category: "Image",
   description: "Return A Triggered Image!",
