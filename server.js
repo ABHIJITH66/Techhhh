@@ -199,6 +199,12 @@ client.on("guildMemberRemove", async member => {
 });
 //end welcome
 
+//c 
+// Default
+
+// Custom
+let SnakeGame = require("discord-snakegame");
+SnakeGame = new SnakeGame({ backg: "🟫", snake: "🟠", snakeTail: "🟡", apple: "🍎" });
 
 
 client.login(Token);
