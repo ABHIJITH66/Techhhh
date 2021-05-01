@@ -17,6 +17,7 @@ dependencies:
   novelcovid: 3.0.0
   old-wio.db: 4.0.10
   quick.db: 7.1.1
+  something-random-on-discord: 3.4.4
   srod-v2: 1.0.2
   tinyurl: 1.1.7
   util: 0.12.3
@@ -742,6 +743,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+  /axios/0.21.1:
+    dependencies:
+      follow-redirects: 1.14.0
+    dev: false
+    resolution:
+      integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   /balanced-match/1.0.2:
     dev: false
     resolution:
@@ -1815,6 +1822,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
+  /follow-redirects/1.14.0:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-0vRwd7RKQBTt+mgu87mtYeofLFZpTas2S9zY+jIeuLJMNvudIgF52nr19q40HOwH5RrhWIPuj9puybzSJiRrVg==
   /follow-redirects/1.5.10:
     dependencies:
       debug: 3.1.0
@@ -3621,6 +3634,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Qu+VC3EwYLldKa1fCxuuvULvSJOKEgk9pi8dZeCVK7TqBfUNTH4sFkk4joj8afVSfAYgJoSOetjx9QWOJ5mYoQ==
+  /something-random-on-discord/3.4.4:
+    dependencies:
+      axios: 0.21.1
+    dev: false
+    resolution:
+      integrity: sha512-xyaSTJmKnG7ARvbp0H6wquFXzQjhB3gF4ZRLwOPpPQTIstBpolNdJCkGbx58MjMK3Wb6WnPlEjYAMNrFSv+L8Q==
   /spawn-sync/1.0.15:
     dependencies:
       concat-stream: 1.6.2
@@ -4319,6 +4338,7 @@ specifiers:
   novelcovid: ^3.0.0
   old-wio.db: ^4.0.10
   quick.db: ^7.1.1
+  something-random-on-discord: ^3.4.4
   srod-v2: ^1.0.2
   tinyurl: ^1.1.7
   util: ^0.12.3
