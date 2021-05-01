@@ -109,13 +109,8 @@ fs.readdir(`./commands/${module}`, (err, files) => {
     let props = require(`./commands/${module}/${file}`);
     let commandName = file.split(".")[0];
     client.commands.set(commandName, props);
-    console.log("Loading Command: "+commandName)
+    console.log("Loading//end command
 
-  
-  });
-});
-});
-//end command
   
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
