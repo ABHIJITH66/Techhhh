@@ -14,6 +14,7 @@ dependencies:
   express: 4.17.1
   figlet: 1.5.0
   fs: 0.0.2
+  google-play-scraper: 8.0.2
   jimp: 0.16.1
   live-server: 1.2.1
   mathjs: 9.3.2
@@ -2056,7 +2057,7 @@ packages:
       integrity: sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g==
   /ext/1.4.0:
     dependencies:
-      type: 2.3.0
+      type: 2.5.0
     dev: false
     resolution:
       integrity: sha512-Key5NIsUxdqKg3vIsdw9dSuXpPCQ297y6wBjL30edxwPgt2E44WcWBZey/ZvUc6sERLTxKdyCu4gZFmUbk1Q7A==
@@ -2428,6 +2429,18 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
+  /google-play-scraper/8.0.2:
+    dependencies:
+      cheerio: 0.22.0
+      debug: 2.6.9
+      eslint: 5.16.0
+      memoizee: 0.4.15
+      ramda: 0.21.0
+      request: 2.88.2
+      throttled-request: 0.1.1
+    dev: false
+    resolution:
+      integrity: sha512-fdc163GNyzx7Ygz8TSUwWM0hOsxgNYXRMWPZ9OnzwOLgKikUegAiCBICJzdqFdhnCKlx0bIxlghAT1eAo9/61w==
   /graceful-fs/4.2.6:
     dev: false
     resolution:
@@ -4238,6 +4251,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-PziF96cxYNvHcgkZkEbZ3UzhR2bXcLff96n68J1DhE/2Q2ELeGnd/Z4jtqJqZz5rfiqXvzEbCznXV8wNsOTSww==
+  /ramda/0.21.0:
+    dev: false
+    resolution:
+      integrity: sha1-oAGr7bP/YQd9T/HVd9RN536NCjU=
   /randombytes/2.1.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -5020,6 +5037,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ZnizL6DKIY/laZgbvYhxtZQGDYE=
+  /throttled-request/0.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-QUa3C3elrsozxGMyzxPrnHkelxs=
   /through/2.3.8:
     dev: false
     resolution:
@@ -5188,10 +5209,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+5nt5AAniqsCnu2cEQQdpzCAh33kVx8n0VoFidKpB1dVVLAN/F+bgVOqOJqOnEnrhp222clB5p3vUlD+1QAnfg==
-  /type/2.3.0:
+  /type/2.5.0:
     dev: false
     resolution:
-      integrity: sha512-rgPIqOdfK/4J9FhiVrZ3cveAjRRo5rsQBAIhnylX874y1DX/kEKSVdLsnuHB6l1KTjHyU01VjiMBHgU2adejyg==
+      integrity: sha512-180WMDQaIMm3+7hGXWf12GtdniDEy7nYcyFMKJn/eZz/6tSLXrUN9V0wKSbMjej0I1WHWbpREDEKHtqPQa9NNw==
   /typed-function/2.0.0:
     dev: false
     engines:
@@ -5525,6 +5546,7 @@ specifiers:
   express: ^4.17.1
   figlet: ^1.5.0
   fs: ^0.0.2
+  google-play-scraper: ^8.0.2
   jimp: ^0.16.1
   live-server: ^1.2.1
   mathjs: ^9.3.2

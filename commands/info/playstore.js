@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const PlayStore = require("google-play-scraper");
-const EmbedColor = ``;
+const EmbedColor = `RANDOM`;
 
 
 module.exports = {
