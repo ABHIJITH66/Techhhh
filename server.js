@@ -43,7 +43,8 @@ client.on("ready", async () => { console.log(`ready!`); client.user .setActivity
 //hi
 
 //
-client.on("message", (message) => {
+client.on("message", (message) =>{
+  
   
   if (message.content.startsWith("Tech")) {
     message.channel.send("THAT MEANS PRO!");

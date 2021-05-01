@@ -1,4 +1,3 @@
-
 module.exports = {
   name: "bug",
 category: "info",
@@ -9,6 +8,6 @@ run : async(client, message, args) => {
   args = args.join(" ");   
   message.reply("Thanks for submitting a bug!");  
   const content = `\`\`\`**${message.author.username}#${message.author.discriminator}** (${message.author.id}) reported:\n~~--------------------------------~~\n${args}\n~~--------------------------------~~\nOn the server: **${message.guild.name}**\nServer ID: **${message.guild.id}**\`\`\``;   
-  client.channels.cache.get('812592666286096404').send(content)
+  client.channels.cache.get('818135844753899592').send(content)
 }
 }
