@@ -1,4 +1,5 @@
 const { MessageEmbed }= require('discord.js');
+const { color} = require ("../../config.js");
 const moment = require('moment');
 const { mem, cpu, os } = require('node-os-utils');
 const { stripIndent } = require('common-tags');
@@ -37,7 +38,7 @@ module.exports = {
       .addField('ServerInfo', `\`\`\`asciidoc\n${serverStats}\`\`\``)
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
       .setTimestamp()
-      .setColor(RED);
+      .setColor(color);
      message.channel.send(embed);
     }
 }
