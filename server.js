@@ -17,15 +17,6 @@ client.queue = new Map();
   require(`./handlers/${handler}`)(client);
 });
 
-const player = fs.readdirSync('./handlers').filter(file => file.endsWith('.js'));
-
-for (const file of player) {
-    //console.log(`Loading discord-player event ${file}`);
-    const event = require(`./handlers/${file}`);
-    client.player.on(file.split(".")[0], event.bind(null, client));
-};
-
-
 
 
 
