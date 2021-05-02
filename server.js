@@ -49,17 +49,6 @@ module.exports.help = {
   name: "channel"
 }
 client.on("ready", async () => { console.log(`ready!`); 
-      const cooldowns = new Collection();
-const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-/**
- * Client Events
- */
-client.on("ready", () => {
-   function randomStatus() {
- let status = ["TECH TIPS BY ABHIJITH", "=help"]
-let rstatus = Math.floor(Math.random() * status.length);
-//hi
 
 //
 client.on("message", (message) =>{
