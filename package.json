@@ -52,7 +52,8 @@
     "mongoose": "^5.12.7",
     "discord.js-commando": "^0.12.3",
     "ascii-table": "^0.0.9",
-    "player": "^0.6.1"
+    "player": "^0.6.1",
+    "firebase-tools": "^5.1.1"
   },
   "engines": {
     "node": "12.x"
