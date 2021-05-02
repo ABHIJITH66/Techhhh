@@ -10,6 +10,27 @@ const db = require("quick.db")
 var jimp = require('jimp');
 const canvas = require("discord-canvas");
 
+//-----database-------
+client.queue = new Map();
+
+["command"].forEach(handler => {
+  require(`./handlers/${handler}`)(client);
+});
+
+const player = fs.readdirSync('./player').filter(file => file.endsWith('.js'));
+
+
+for (const file of player) {
+    //console.log(`Loading discord-player event ${file}`);
+    const event = require(`./player/${file}`);
+    client.player.on(file.split(".")[0], event.bind(null, client));
+};
+
+
+
+
+
+
 const { Default_Prefix, Support, Owner, WelcomeImage, LeaveImage } = require("./config.js");
 
 module.exports.run = async (bot, message, args) => {
