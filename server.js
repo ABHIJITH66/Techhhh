@@ -48,7 +48,8 @@ return;
 module.exports.help = {
   name: "channel"
 }
-client.on("ready", async () => { console.log(`ready!`); 
+client.on("ready", async () => { console.log(`ready!`); client.user .setActivity(`USE =help FOR HELP`, { type: "PLAYING" }) .catch(error => console.log(error)); });
+//hi
 
 //
 client.on("message", (message) =>{
