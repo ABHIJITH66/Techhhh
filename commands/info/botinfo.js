@@ -37,7 +37,7 @@ module.exports = {
       .addField('ServerInfo', `\`\`\`asciidoc\n${serverStats}\`\`\``)
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
       .setTimestamp()
-      .setColor(message.guild.me.displayHexColor);
+      .setColor(RED);
      message.channel.send(embed);
     }
 }
