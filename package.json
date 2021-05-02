@@ -49,7 +49,8 @@
     "discord-snakegame": "^2.0.0",
     "google": "^2.1.0",
     "moment-timezone": "^0.5.33",
-    "mongoose": "^5.12.7"
+    "mongoose": "^5.12.7",
+    "discord.js-commando": "^0.12.3"
   },
   "engines": {
     "node": "12.x"
