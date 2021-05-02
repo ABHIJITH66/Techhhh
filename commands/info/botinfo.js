@@ -33,8 +33,8 @@ module.exports = {
     
     const embed = new MessageEmbed()
       .setTitle('INFORMATION ABOUT BOT')
-      .addField('Client', `\`\`\`asciidoc\n${clientStats}\`\`\``)
-      .addField('Server', `\`\`\`asciidoc\n${serverStats}\`\`\``)
+      .addField('BasicInfo', `\`\`\`asciidoc\n${clientStats}\`\`\``)
+      .addField('ServerInfo', `\`\`\`asciidoc\n${serverStats}\`\`\``)
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
       .setTimestamp()
       .setColor(message.guild.me.displayHexColor);
