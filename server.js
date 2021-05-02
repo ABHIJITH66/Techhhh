@@ -99,7 +99,9 @@ client.on("message", (message) => {
 
 //command 
 
-let modules = ["fun", "info","moderation"];
+
+
+let modules = ["fun",'info', "moderation"];
 modules.forEach(function(module) {
 fs.readdir(`./commands/${module}`, (err, files) => {
   if (err) return console.error(err);
@@ -112,7 +114,6 @@ fs.readdir(`./commands/${module}`, (err, files) => {
   });
 });
 });
-
 //-
   
 client.on("message", async message => {
