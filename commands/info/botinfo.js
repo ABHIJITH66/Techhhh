@@ -14,6 +14,7 @@ module.exports = {
     const days = (d.days() == 1) ? `${d.days()} day` : `${d.days()} days`;
     const hours = (d.hours() == 1) ? `${d.hours()} hour` : `${d.hours()} hours`;
     const clientStats = stripIndent`
+      Name      :: Tech Mod
       Servers   :: ${message.client.guilds.cache.size}
       Users     :: ${message.client.users.cache.size}
       Channels  :: ${message.client.channels.cache.size}
