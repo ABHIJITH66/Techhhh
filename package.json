@@ -47,7 +47,9 @@
     "live-server": "^1.2.1",
     "google-play-scraper": "^8.0.2",
     "discord-snakegame": "^2.0.0",
-    "google": "^2.1.0"
+    "google": "^2.1.0",
+    "moment-timezone": "^0.5.33",
+    "mongoose": "^5.12.7"
   },
   "engines": {
     "node": "12.x"
