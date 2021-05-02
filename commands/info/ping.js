@@ -1,24 +1,15 @@
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
-
 module.exports = {
-  name: "ping",
-  aliases: ["p"],
-  description: "Pong!",
-  usage: "Ping",
+name: "ping",
+  aliases: ["pg"],
+  description: "Check the ping",
+  usage: "ping",
   run: async (client, message, args) => {
     //Start
     message.delete();
+    message.reply('Calculating ping...').then((resultMessage) => {
+      const ping = resultMessage.createdTimestamp - message.createdTimestamp
 
-    const embed = new MessageEmbed()
-      .setColor(Color)
-      .setDescription(`📈 Average ping is - ${client.ws.ping}`)
-      .setFooter(`Requested By ${message.author.username}`)
-      .setTimestamp();
-
-    message.channel.send(embed);
-
-    //End
-  }
-};
+      resultMessage.edit(`Bot latency: ${ping}, API Latency: ${client.ws.ping}`)
+    })
+  },
+}
