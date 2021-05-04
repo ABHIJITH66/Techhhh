@@ -38,6 +38,7 @@ module.exports = {
       .addField('ServerInfo', `\`\`\`asciidoc\n${serverStats}\`\`\``)
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
       .setTimestamp()
+      .setDescription('IF ANY BUGS ARE PLS TYPE =bug And We Will soon solve it')
       .setColor(color);
      message.channel.send(embed);
     }
