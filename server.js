@@ -10,16 +10,7 @@ const db = require("quick.db")
 var jimp = require('jimp');
 const canvas = require("discord-canvas");
 
-//-----database-------
-client.queue = new Map();
-
-["command"].forEach(handler => {
-  require(`./handlers/${handler}`)(client);
-});
-
-
-
-
+//-----database-------ap
 const { Default_Prefix, Support, Owner, WelcomeImage, LeaveImage } = require("./config.js");
 
 module.exports.run = async (bot, message, args) => {
