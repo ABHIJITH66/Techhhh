@@ -54,7 +54,9 @@
     "ascii-table": "^0.0.9",
     "player": "^0.6.1",
     "firebase-tools": "^5.1.1",
-    "Utils": "^1.0.39"
+    "Utils": "^1.0.39",
+    "request": "^2.88.2",
+    "cheerio": "^0.22.0"
   },
   "engines": {
     "node": "12.x"
