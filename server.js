@@ -39,7 +39,7 @@ return;
 module.exports.help = {
   name: "channel"
 }
-client.on("ready", async () => { console.log(`ready!`); client.user .setActivity(`TECH MODE ON WORK`, { type: "WATCHING" }) .catch(error => console.log(error)); });
+client.on("ready", async () => { console.log(`ready!`); client.user .setActivity(`USE =help FOR HELP`, { type: "PLAYING" }) .catch(error => console.log(error)); });
 //hi
 
 
@@ -82,7 +82,15 @@ client.on("message", async message => {
   let command =
     client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
 
+  if (!command) return;
 
+  if (command) {
+    if (!message.guild.me.hasPermission("ADMINISTRATOR"))
+      return message.channel.send(
+        "I Don't Have Enough Permission To Use This Or Any Of My Commands | Require : Administrator"
+      );
+    command.run(client, message, args);
+  }
   console.log(
     `User : ${message.author.tag} (${message.author.id}) Server : ${message.guild.name} (${message.guild.id}) Command : ${command.name}`
   );
