@@ -7,12 +7,12 @@ const moment = require('moment');
 module.exports = {
   name: "rank",
   aliases: [""],
-  description: "Show Playstore Application Information Of Your Given Name!",
+  description: "shows your Rank!",
   usage: "rank",
   category: "Members",
   run: async (client, message, args) => {
    
-        const leaderboard = await message.client.levels.getLeaderboard(message.guild);
+         const leaderboard = await message.client.levels.getLeaderboard(message.guild);
 
         function cmpFunction(item) {
             return item.user == message.author.id;
