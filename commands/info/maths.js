@@ -1,23 +1,19 @@
-const { MessageEmbed } = require("discord.js");
-const math = require("mathjs");
-const Color = `RANDOM`;
+const Discord = require('discord.js')
+const Subiex = require('../server.js')
+const math = require('mathjs')
 
-module.exports = {
-  name: "maths",
-  category: "info",
-  run: async (client, message, args) => {
-    try {
-      if (!args[0]) return message.channel.send("Please Give Me Equation!");
-
-      const embed = new MessageEmbed()
-        .setColor(`${Color}`)
-        .setTitle(`Result`)
-        .setDescription(math.evaluate(args.join(" ")))
-        .setTimestamp();
-
-      message.channel.send(embed);
-    } catch (error) {
-      message.channel.send(`Please Give Me Valid Equation | Try Again Later!`).then(() => console.log(error));
+Subiex.registerCommand('math', 'default', (message, bot) => {
+  let result
+  try {
+    result = math.eval(message.content)
+  } catch (error) {
+    console.log('Failed math calculation ' + message.content + '\nError: ' + e.stack)
+    return 'Error while evaluating the math expression.'
+  } finally {
+    if (isNaN(parseFloat(result))) {
+      return 'Invalid Calculation Expression'
+    } else {
+      return '**Result:** ' + result
     }
   }
-  };
+}, ['calculate', 'calc', 'calculator'], 'Calculate a math expression', '<expression>')
