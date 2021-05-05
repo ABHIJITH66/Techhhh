@@ -31,7 +31,7 @@ exports.run = (client, message, args) =>{
     uptime += `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
 
     let serverembed = new Discord.MessageEmbed()
-        .setColor("#228B22")
+        .setColor(message.guild.me.displayHexColor)
         .addField('TECH MOD UPTIME', uptime);
 
     message.channel.send(serverembed);
