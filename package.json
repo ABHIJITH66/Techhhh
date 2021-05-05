@@ -59,7 +59,8 @@
     "cheerio": "^0.22.0",
     "discord-image-generation": "^1.4.9",
     "snekfetch": "^4.0.4",
-    "fs-nextra": "^0.5.0"
+    "fs-nextra": "^0.5.0",
+    "sqlite": "^4.0.21"
   },
   "engines": {
     "node": "12.x"

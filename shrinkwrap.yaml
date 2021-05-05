@@ -41,6 +41,7 @@ dependencies:
   request-promise-native: 1.0.9
   snekfetch: 4.0.4
   something-random-on-discord: 3.4.4
+  sqlite: 4.0.21
   srod-v2: 1.0.2
   tinyurl: 1.1.7
   util: 0.12.3
@@ -6969,6 +6970,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+  /sqlite/4.0.21:
+    dev: false
+    resolution:
+      integrity: sha512-HIqObuvz+Vx8BXWzIhR12fJMjiE37Mdfupg2Ok0f8MChSqALXj7FgpZauj1pJoSY6qsDYmp/+/ZgSn3l8yutoA==
   /srod-v2/1.0.2:
     dependencies:
       node-fetch: 2.6.1
@@ -8177,6 +8182,7 @@ specifiers:
   request-promise-native: ^1.0.9
   snekfetch: ^4.0.4
   something-random-on-discord: ^3.4.4
+  sqlite: ^4.0.21
   srod-v2: ^1.0.2
   tinyurl: ^1.1.7
   util: ^0.12.3
