@@ -39,7 +39,7 @@ return;
 module.exports.help = {
   name: "channel"
 }
-client.on("ready", async () => { console.log(`ready!`); client.user .setActivity(`Use =help For Help`, { type: "Playing" }) .catch(error => console.log(error)); });
+client.on("ready", async () => { console.log(`ready!`); client.user .setActivity(`Use =help For Help`, { type: "PLAYING" }) .catch(error => console.log(error)); });
 //hi
 
 
