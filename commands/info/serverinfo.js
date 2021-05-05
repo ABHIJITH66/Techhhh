@@ -1,40 +1,47 @@
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
+const Discord = require('discord.js');
 
-module.exports = {
-  name: "serverinfo",
-  aliases: ["serverinformation"],
-  description: "Show Server Information!",
-  usage: "Serverinfo",
-  run: async (client, message, args) => {
-    //Start
-    message.delete();
-    const guild = message.guild;
-    const Emojis = guild.emojis.cache.size || "No Emoji!";
-    const Roles = guild.roles.cache.size || "No Roles!";
-    const Members = guild.memberCount;
-    const Humans = guild.members.cache.filter(member => !member.user.bot).size;
-    const Bots = guild.members.cache.filter(member => member.user.bot).size;
+exports.run = (client, message, args) =>{
+    function checkBots(guild) {
+        let botCount = 0;
+        guild.members.cache.forEach(member => {
+            if(member.user.bot) botCount++;
+        });
+        return botCount;
+    }
+    
+    function checkMembers(guild) {
+        let memberCount = 0;
+        guild.members.cache.forEach(member => {
+            if(!member.user.bot) memberCount++;
+        });
+        return memberCount;
+    }
 
-    const embed = new MessageEmbed()
-      .setTitle(guild.name + " Information!")
-      .setColor(Color)
-      .setThumbnail(guild.iconURL())
-      .addField(`Name`, guild.name, true)
-      .addField(`ID`, `${guild.id}`, true)
-      .addField(`Owner`, `${guild.owner.user.tag}`, true)
-      .addField(`Roles Count`, Roles, true)
-      .addField(`Emojis Count`, Emojis, true)
-      .addField(`Members Count`, Members, true)
-      .addField(`Humans Count`, Humans, true)
-      .addField(`Bots Count`, Bots, true)
-      .addField(`Server Created At`, guild.createdAt.toDateString())
-      .setFooter(` Requested by ${message.author.username}`)
-      .setTimestamp();
+    function checkOnlineUsers(guild) {
+        let onlineCount = 0;
+        guild.members.cache.forEach(member => {
+            if(member.user.presence.status === "online")
+                onlineCount++; 
+        });
+        return onlineCount;
+    }
 
-    message.channel.send(embed);
+    let sicon = message.guild.iconURL;
+    let serverembed = new Discord.MessageEmbed()
+        .setAuthor(`${message.guild.name} - Informations`, message.guild.iconURL)
+        .setColor("#15f153")
+        .addField('Server owner', message.guild.owner, true)
+        .addField('Server region', message.guild.region, true)
+        .setThumbnail(sicon)
+        .addField("Server Name", message.guild.name)
+        .addField('Verification level', message.guild.verificationLevel, true)
+        .addField('Channel count', message.guild.channels.cache.size, true)
+        .addField('Total member count', message.guild.memberCount)
+        .addField('Humans', checkMembers(message.guild), true)
+        .addField('Bots', checkBots(message.guild), true)
+        .addField('Online', checkOnlineUsers(message.guild))
+        .setFooter('Guild created at:')
+        .setTimestamp(message.guild.createdAt);
 
-    //End
-  }
-};
+    return message.channel.send(serverembed);
+}

@@ -21,7 +21,7 @@ module.exports = {
       Channels  :: ${message.client.channels.cache.size}
       WS Ping   :: ${Math.round(message.client.ws.ping)}ms
       CREATER   :: ABHIJITH#6408
-    `;
+  `;
     const { totalMemMb, usedMemMb } = await mem.info();
     const serverStats = stripIndent`
       OS        :: ${await os.oos()}
@@ -30,6 +30,7 @@ module.exports = {
       CPU Usage :: ${await cpu.usage()} %
       RAM       :: ${totalMemMb} MB
       RAM Usage :: ${usedMemMb} MB 
+      Uptime:
     `;
     
     const embed = new MessageEmbed()
