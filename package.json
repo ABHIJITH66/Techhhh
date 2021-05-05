@@ -56,7 +56,8 @@
     "firebase-tools": "^5.1.1",
     "Utils": "^1.0.39",
     "request": "^2.88.2",
-    "cheerio": "^0.22.0"
+    "cheerio": "^0.22.0",
+    "discord-image-generation": "^1.4.9"
   },
   "engines": {
     "node": "12.x"
