@@ -1,5 +1,6 @@
 dependencies:
   '@ethersproject/errors': 5.0.1
+  Utils: 1.0.39
   aki-api: 5.2.1
   amethyste-api: 1.1.5
   ascii-table: 0.0.9
@@ -630,6 +631,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==
+  /Utils/1.0.39:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-becWMs+9ke2aOL+kcuivwzs0C9k=
   /abbrev/1.1.1:
     dev: false
     resolution:
@@ -8182,6 +8188,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@ethersproject/errors': ^5.0.1
+  Utils: ^1.0.39
   aki-api: ^5.0.0
   amethyste-api: ^1.1.4
   ascii-table: ^0.0.9
