@@ -27,12 +27,12 @@ exports.run = (client, message, args) =>{
     if(minutes > 60){
         minutes = 0;
     }
- .
+ 
     uptime += `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
 
     let serverembed = new Discord.MessageEmbed()
         .setColor("#228B22")
-        .addField('Uptime', uptime);
+        .addField('TECH MOD UPTIME', uptime);
 
     message.channel.send(serverembed);
 
