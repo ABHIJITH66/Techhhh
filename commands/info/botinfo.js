@@ -30,7 +30,6 @@ module.exports = {
       CPU Usage :: ${await cpu.usage()} %
       RAM       :: ${totalMemMb} MB
       RAM Usage :: ${usedMemMb} MB 
-      Uptime:
     `;
     
     const embed = new MessageEmbed()

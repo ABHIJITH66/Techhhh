@@ -27,7 +27,7 @@ exports.run = (client, message, args) =>{
     if(minutes > 60){
         minutes = 0;
     }
-
+ .
     uptime += `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
 
     let serverembed = new Discord.MessageEmbed()

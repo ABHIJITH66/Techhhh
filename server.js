@@ -85,7 +85,7 @@ client.on("message", async message => {
   if (!command) return;
 
   if (command) {
-    if (!message.guild.me.hasPermission("ADMINISTRATOR"))
+    if (!message.guild.me.hasPermission("ADMINISTRATION"))
       return message.channel.send(
         "I Don't Have Enough Permission To Use This Or Any Of My Commands | Require : Administrator"
       );
